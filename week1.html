@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 1 — Polynomial Regression</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">🤖 Machine Learning</div>
+      <div class="header-sub">Week 1 — Polynomial Regression</div>
+    </div>
+    <div class="week-badge">WEEK 1</div>
+  </div>
+</div>
+<div class="topnav"><a href="week1.html" class="active">WEEK 1</a><a href="week2.html" class="">WEEK 2</a><a href="week3.html" class="">WEEK 3</a><a href="week4.html" class="">WEEK 4</a><a href="week5.html" class="">WEEK 5</a><a href="week6.html" class="">WEEK 6</a><a href="index.html">🏠 Portal</a></div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Week 1 — Polynomial Regression</h1>
+    <p>Memahami hubungan non-linear dengan quadratic dan cubic model.</p>
+    <div class="pillrow">
+      <span class="pill">Materi inti</span>
+      <span class="pill">Analogi cepat paham</span>
+      <span class="pill">English term + arti Indonesia</span>
+      <span class="pill">15 soal</span>
+      <span class="pill">Jebakan dosen</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="tabs">
+    <button class="tab active" data-target="materi" onclick="showSection('materi')">📖 Materi</button>
+    <button class="tab" data-target="analogi" onclick="showSection('analogi')">🧠 Analogi</button>
+    <button class="tab" data-target="kata-kunci" onclick="showSection('kata-kunci')">🔑 Kata Kunci</button>
+    <button class="tab" data-target="latihan" onclick="showSection('latihan')">✏️ 15 Soal</button>
+    <button class="tab" data-target="jebakan" onclick="showSection('jebakan')">⚠️ Jebakan</button>
+  </div>
+
+  <div id="materi" class="section active">
+    <div class="section-title">Week 1 — Polynomial Regression</div>
+    <div class="section-desc">Fokus: kapan linear model gagal, kapan polynomial regression dibutuhkan, cara baca bentuk kurva, dan makna koefisien.</div>
+    <div class="grid"><div class="card"><span class="tag">Konsep Inti</span><h3>Polynomial Regression</h3><p>Model regresi yang menambahkan <strong>X²</strong>, <strong>X³</strong>, dan seterusnya agar hubungan yang melengkung tetap bisa dimodelkan. Model ini <strong>non-linear di X</strong>, tetapi tetap <strong>linear di parameter/koefisien</strong>.</p><div class="badge">⚡ Definisi wajib</div></div><div class="card"><span class="tag">Kapan Dipakai?</span><h3>Saat Linear Tidak Cukup</h3><p>Kalau scatter plot menunjukkan pola naik-lalu-melandai, U-shape, atau S-shape, maka garis lurus tidak cukup. Di slide week 1, contoh hubungan <em>Electives → Interest</em> jelas melengkung sehingga model linear bias.</p><div class="badge">Cek scatter plot dulu</div></div><div class="card"><span class="tag">Shape</span><h3>Order Menentukan Lengkungan</h3><p>Linear = 0 bend, Quadratic = 1 bend, Cubic = 2 bends. Rule cepat: <strong>jumlah lengkungan = order - 1</strong>.</p><div class="badge">⚡ Sering keluar</div></div><div class="card"><span class="tag">Koefisien</span><h3>Tanda X² Menentukan Arah</h3><p>Jika koefisien X² positif, kurva membuka ke atas (U). Jika negatif, membuka ke bawah (∩). Jadi tanda koefisien tertinggi menentukan arah curvature.</p><div class="badge">Wajib hafal</div></div><div class="card"><span class="tag">Centering</span><h3>Mengubah Interpretasi</h3><p>Centering X berarti menggeser titik acuan dari X=0 ke <strong>mean(X)</strong>. Fit model sama, tapi interpretasi koefisien linear menjadi ‘efek pada nilai rata-rata X’.</p><div class="badge">⚡ Jebakan dosen</div></div><div class="card"><span class="tag">Calculus</span><h3>Turunan = Perubahan Slope</h3><p>Untuk model Y = a + bX + cX², maka slope lokal adalah dY/dX = b + 2cX. Jadi efek X terhadap Y tidak konstan; berubah di setiap titik X.</p><div class="badge">Inti lanjutan</div></div></div>
+    <div class="info-block" style="margin-top:18px">
+      <h3>📌 Tabel Ringkas</h3>
+      
+        <table class="compare-table">
+          <tr><th>Model</th><th>Bentuk</th><th>Kapan Dipakai</th></tr>
+          <tr><td>Linear</td><td>Garis lurus</td><td>Saat hubungan X–Y mendekati lurus</td></tr>
+          <tr><td>Quadratic</td><td>U / ∩</td><td>Saat ada satu lengkungan</td></tr>
+          <tr><td>Cubic</td><td>S-shape</td><td>Saat ada dua lengkungan / perubahan arah lebih kompleks</td></tr>
+        </table>
+        
+      <p><strong>Tips cepat:</strong> sebelum menghafal rumus, pahami dulu <em>cara berpikir model</em>. Di UTS, dosen sering menguji konsep, bukan sekadar hafalan definisi.</p>
+    </div>
+  </div>
+
+  <div id="analogi" class="section">
+    <div class="section-title">🧠 Cara Cepat Paham dengan Analogi</div>
+    <div class="section-desc">Analogi dibuat supaya inti materinya cepat masuk, tapi tetap setia pada konsep aslinya.</div>
+    <div class="analogy-box">
+      <div class="analogy-title">Analogi utama</div>
+      <p>Bayangkan kamu menuang air ke mangkuk. Garis lurus cocok untuk jalan datar, tapi mangkuk itu melengkung. Polynomial regression adalah cara menyesuaikan model dengan bentuk mangkuk, bukan memaksa semua jadi garis lurus.</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Cara pakai analogi ini</h3>
+      <ul>
+        <li>Pakai analogi untuk ingat <strong>alurnya</strong>, bukan mengganti definisi formal.</li>
+        <li>Setelah paham analogi, cocokkan lagi ke istilah asli bahasa Inggris.</li>
+        <li>Kalau bisa menjelaskan dengan analogi + istilah formal, biasanya kamu sudah benar-benar paham.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="kata-kunci" class="section">
+    <div class="section-title">🔑 Kata Kunci Wajib Hafal</div>
+    <div class="section-desc">Istilah English tetap dipertahankan, lalu dijelaskan artinya dalam bahasa Indonesia.</div>
+    <div class="keyword-grid" id="keyword-grid"></div>
+  </div>
+
+  <div id="latihan" class="section">
+    <div class="section-title">✏️ Latihan Soal Week Ini</div>
+    <div class="section-desc">Ada 15 soal. Tidak dibuat terlalu mudah, tetapi tetap fair untuk menguji pemahaman konsep.</div>
+    <div id="quiz-container"></div>
+  </div>
+
+  <div id="jebakan" class="section">
+    <div class="section-title">⚠️ Jebakan Dosen</div>
+    <div class="section-desc">Kalimat atau konsep yang sering bikin mahasiswa salah.</div>
+    <div class="trap-card">⚠️ Polynomial regression <strong>bukan</strong> berarti modelnya tidak linear sama sekali. Ia tetap linear pada koefisien.</div><div class="trap-card">⚠️ Koefisien linear <strong>bukan</strong> efek global tetap; pada model quadratic, koefisien linear adalah slope di titik acuan.</div><div class="trap-card">⚠️ Model linear yang signifikan <strong>belum tentu</strong> bagus jika plot residual menunjukkan pola melengkung.</div><div class="trap-card">⚠️ Centering tidak mengubah kualitas fit model, tapi mengubah makna koefisien.</div>
+  </div>
+</div>
+
+<div class="footer">Machine Learning Interaktif · Week 1 — Polynomial Regression</div>
+<script src="assets/app.js"></script>
+<script>
+const weekKeywords = [{"en": "Polynomial Regression", "id": "Regresi polinomial; model regresi dengan pangkat X seperti X² dan X³."}, {"en": "Quadratic", "id": "Pangkat dua; model dengan satu lengkungan."}, {"en": "Cubic", "id": "Pangkat tiga; model dengan dua lengkungan."}, {"en": "Curvature", "id": "Kelengkungan hubungan X terhadap Y."}, {"en": "Centering", "id": "Menggeser variabel terhadap rata-ratanya."}, {"en": "Simple slope", "id": "Kemiringan lokal pada titik tertentu."}, {"en": "Residual", "id": "Selisih antara nilai asli dan prediksi model."}, {"en": "R-squared", "id": "Proporsi variasi Y yang dijelaskan model."}, {"en": "Underestimate", "id": "Meremehkan efek sebenarnya."}, {"en": "Linearity assumption", "id": "Asumsi bahwa hubungan berbentuk garis lurus."}];
+const weekQuestions = [{"type": "mc", "typeName": "Pilihan Ganda", "q": "Apa alasan utama memakai polynomial regression?", "options": ["Karena semua data harus dibuat non-linear", "Karena hubungan X–Y melengkung dan garis lurus tidak cukup", "Karena model linear tidak bisa menghitung koefisien", "Karena polynomial selalu punya error nol"], "answer": 1, "explanation": "Polynomial regression dipakai saat hubungan tidak linear, misalnya naik lalu melandai atau berbentuk U."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Model quadratic memiliki berapa lengkungan utama?", "options": ["0", "1", "2", "3"], "answer": 1, "explanation": "Quadratic = satu bend/lengkungan. Rule cepat: jumlah bend = order - 1."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika koefisien X² bernilai negatif, bentuk kurva quadratic cenderung…", "options": ["Membuka ke atas", "Membuka ke bawah", "Menjadi garis lurus", "Pasti berbentuk S"], "answer": 1, "explanation": "Tanda koefisien X² menentukan arah kurva; negatif → ∩."}, {"type": "mc", "typeName": "True / False", "q": "Polynomial regression tetap linear pada parameter/koefisien.", "options": ["True", "False"], "answer": 0, "explanation": "Meski non-linear di X, model masih linear dalam koefisiennya."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Dalam model Y = a + bX + cX², efek lokal X terhadap Y diperoleh dari…", "options": ["R-squared", "Residual", "Turunan dY/dX", "Intercept"], "answer": 2, "explanation": "Simple slope lokal didapat dari turunan: dY/dX = b + 2cX."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Mengapa model linear pada contoh Electives → Interest dianggap buruk?", "options": ["Karena R² terlalu besar", "Karena asumsi linearity dilanggar dan residual menunjukkan pola melengkung", "Karena intercept negatif", "Karena quadratic selalu wajib"], "answer": 1, "explanation": "Signifikan saja tidak cukup; plot residual dan component+residual plot menunjukkan pola non-linear."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Apa efek utama dari centering variabel X pada polynomial regression?", "options": ["Mengubah kualitas fit model", "Mengubah jumlah data", "Mengubah interpretasi koefisien tanpa mengubah fit keseluruhan", "Menghapus efek quadratic"], "answer": 2, "explanation": "Centering memindahkan titik acuan, biasanya ke mean(X)."}, {"type": "mc", "typeName": "True / False", "q": "Jika model quadratic lebih baik dari linear, maka koefisien X² pasti tidak nol.", "options": ["True", "False"], "answer": 0, "explanation": "Secara pengujian, kebutuhan model quadratic ekuivalen dengan menguji apakah koefisien X² = 0."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "R-squared model linear 0.56 dan model quadratic 0.67. Kesimpulan paling tepat adalah…", "options": ["Linear lebih baik karena lebih sederhana", "Quadratic menjelaskan variasi lebih banyak daripada linear", "Kedua model pasti sama bagus", "Linear pasti overfitting"], "answer": 1, "explanation": "R² lebih tinggi pada quadratic menunjukkan fit lebih baik pada data tersebut."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Simple slope pada model quadratic bersifat…", "options": ["Selalu konstan", "Berubah tergantung nilai X", "Sama dengan intercept", "Tidak bisa dihitung"], "answer": 1, "explanation": "Inilah inti polynomial: efek X berubah di sepanjang distribusi X."}, {"type": "cata", "typeName": "Choose All That Apply", "q": "Manakah yang termasuk alasan sah memilih order polynomial lebih tinggi?", "options": ["Teori mendukung hubungan lebih kompleks", "Residual menunjukkan pola yang belum tertangkap model lebih rendah", "Supaya pasti dapat R² = 1", "Untuk memodelkan bentuk hubungan yang lebih realistis"], "answers": [0, 1, 3], "explanation": "Order lebih tinggi boleh jika didukung teori/diagnostik, bukan sekadar mengejar R²."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Dalam interpretasi koefisien model polynomial yang belum di-center, koefisien linear biasanya berarti…", "options": ["Efek rata-rata di seluruh rentang X", "Efek X saat X = 0", "Efek global yang tetap", "Besar error model"], "answer": 1, "explanation": "Pada model tak di-center, b1 adalah slope di titik X = 0."}, {"type": "mc", "typeName": "True / False", "q": "Centering predictor dapat membantu mengurangi korelasi antar regressor polynomial.", "options": ["True", "False"], "answer": 0, "explanation": "Regressor X dan X² sering berkorelasi; centering biasanya membantu interpretasi."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Kalimat yang paling tepat tentang turunan dalam polynomial regression adalah…", "options": ["Turunan dipakai untuk menghitung R²", "Turunan menjelaskan bagaimana efek X berubah di tiap titik", "Turunan hanya berlaku untuk cubic", "Turunan sama dengan residual"], "answer": 1, "explanation": "Turunan memberi simple effect atau slope lokal."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika dosen bertanya ‘mengapa linear model bisa salah walau signifikan?’, jawaban terbaik adalah…", "options": ["Karena semua model signifikan itu salah", "Karena signifikansi tidak menjamin bentuk hubungan benar; asumsi linearity bisa tetap dilanggar", "Karena intercept selalu bias", "Karena p-value tidak penting"], "answer": 1, "explanation": "Ini inti jebakan: p-value kecil belum berarti model tepat secara bentuk."}];
+renderKeywords('keyword-grid', weekKeywords);
+createQuizRenderer('quiz-container', weekQuestions);
+</script>
+</body>
+</html>

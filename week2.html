@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 2 — Lasso Regression</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">🤖 Machine Learning</div>
+      <div class="header-sub">Week 2 — Lasso Regression</div>
+    </div>
+    <div class="week-badge">WEEK 2</div>
+  </div>
+</div>
+<div class="topnav"><a href="week1.html" class="">WEEK 1</a><a href="week2.html" class="active">WEEK 2</a><a href="week3.html" class="">WEEK 3</a><a href="week4.html" class="">WEEK 4</a><a href="week5.html" class="">WEEK 5</a><a href="week6.html" class="">WEEK 6</a><a href="index.html">🏠 Portal</a></div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Week 2 — Lasso Regression</h1>
+    <p>Regularization untuk feature selection: shrink dan nol-kan koefisien.</p>
+    <div class="pillrow">
+      <span class="pill">Materi inti</span>
+      <span class="pill">Analogi cepat paham</span>
+      <span class="pill">English term + arti Indonesia</span>
+      <span class="pill">15 soal</span>
+      <span class="pill">Jebakan dosen</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="tabs">
+    <button class="tab active" data-target="materi" onclick="showSection('materi')">📖 Materi</button>
+    <button class="tab" data-target="analogi" onclick="showSection('analogi')">🧠 Analogi</button>
+    <button class="tab" data-target="kata-kunci" onclick="showSection('kata-kunci')">🔑 Kata Kunci</button>
+    <button class="tab" data-target="latihan" onclick="showSection('latihan')">✏️ 15 Soal</button>
+    <button class="tab" data-target="jebakan" onclick="showSection('jebakan')">⚠️ Jebakan</button>
+  </div>
+
+  <div id="materi" class="section active">
+    <div class="section-title">Week 2 — Lasso Regression</div>
+    <div class="section-desc">Fokus: mengapa feature selection penting, beda ridge vs lasso, sparsity, lambda, dan debiasing.</div>
+    <div class="grid"><div class="card"><span class="tag">Motivasi</span><h3>Feature Selection</h3><p>Saat fitur terlalu banyak, model jadi lambat dan sulit dijelaskan. Feature selection memilih fitur yang benar-benar relevan agar model lebih efisien dan interpretatif.</p><div class="badge">⚡ Konsep inti</div></div><div class="card"><span class="tag">Sparsity</span><h3>Banyak Koefisien Nol</h3><p>Model sparse artinya hanya sedikit fitur yang aktif. Keuntungannya: prediksi lebih cepat, memori lebih hemat, penjelasan lebih mudah.</p><div class="badge">Penting untuk UTS</div></div><div class="card"><span class="tag">All Subsets</span><h3>Optimal tapi Mahal</h3><p>Menguji semua subset fitur berarti kompleksitas 2^D. Secara teori bagus, secara komputasi sering tidak feasible.</p><div class="badge">Jebakan umum</div></div><div class="card"><span class="tag">Ridge vs Lasso</span><h3>L2 vs L1</h3><p>Ridge mengecilkan koefisien, tapi jarang membuat nol. Lasso memakai penalti L1 sehingga beberapa koefisien bisa tepat nol.</p><div class="badge">⚡ Perbandingan wajib</div></div><div class="card"><span class="tag">Lambda</span><h3>Trade-off</h3><p>λ kecil → fit data lebih dominan. λ besar → penalti lebih kuat, model lebih sparse. Jadi λ mengatur trade-off antara fit dan sparsity.</p><div class="badge">Wajib hafal</div></div><div class="card"><span class="tag">Debiasing</span><h3>Refit Setelah Seleksi</h3><p>Lasso bagus untuk memilih fitur, tapi koefisiennya bisa terlalu menyusut. Solusi umum: pilih fitur dengan lasso, lalu refit least squares pada fitur terpilih.</p><div class="badge">Lanjutan</div></div></div>
+    <div class="info-block" style="margin-top:18px">
+      <h3>📌 Tabel Ringkas</h3>
+      
+        <table class="compare-table">
+          <tr><th>Metode</th><th>Efek pada Koefisien</th><th>Cocok untuk Seleksi Fitur?</th></tr>
+          <tr><td>Ridge (L2)</td><td>Mengecilkan</td><td>Tidak ideal untuk nol persis</td></tr>
+          <tr><td>Lasso (L1)</td><td>Mengecilkan dan bisa nol</td><td>Ya</td></tr>
+          <tr><td>Elastic Net</td><td>Gabungan shrink + stabilitas</td><td>Sering ya</td></tr>
+        </table>
+        
+      <p><strong>Tips cepat:</strong> sebelum menghafal rumus, pahami dulu <em>cara berpikir model</em>. Di UTS, dosen sering menguji konsep, bukan sekadar hafalan definisi.</p>
+    </div>
+  </div>
+
+  <div id="analogi" class="section">
+    <div class="section-title">🧠 Cara Cepat Paham dengan Analogi</div>
+    <div class="section-desc">Analogi dibuat supaya inti materinya cepat masuk, tapi tetap setia pada konsep aslinya.</div>
+    <div class="analogy-box">
+      <div class="analogy-title">Analogi utama</div>
+      <p>Bayangkan kamu sedang packing untuk mendaki gunung. Semua barang terlihat berguna, tetapi tasmu terbatas. Lasso seperti teman tegas yang bilang: ‘yang ini penting, yang ini buang saja’. Ridge bukan membuang barang, tapi mengecilkan ukuran barang.</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Cara pakai analogi ini</h3>
+      <ul>
+        <li>Pakai analogi untuk ingat <strong>alurnya</strong>, bukan mengganti definisi formal.</li>
+        <li>Setelah paham analogi, cocokkan lagi ke istilah asli bahasa Inggris.</li>
+        <li>Kalau bisa menjelaskan dengan analogi + istilah formal, biasanya kamu sudah benar-benar paham.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="kata-kunci" class="section">
+    <div class="section-title">🔑 Kata Kunci Wajib Hafal</div>
+    <div class="section-desc">Istilah English tetap dipertahankan, lalu dijelaskan artinya dalam bahasa Indonesia.</div>
+    <div class="keyword-grid" id="keyword-grid"></div>
+  </div>
+
+  <div id="latihan" class="section">
+    <div class="section-title">✏️ Latihan Soal Week Ini</div>
+    <div class="section-desc">Ada 15 soal. Tidak dibuat terlalu mudah, tetapi tetap fair untuk menguji pemahaman konsep.</div>
+    <div id="quiz-container"></div>
+  </div>
+
+  <div id="jebakan" class="section">
+    <div class="section-title">⚠️ Jebakan Dosen</div>
+    <div class="section-desc">Kalimat atau konsep yang sering bikin mahasiswa salah.</div>
+    <div class="trap-card">⚠️ Ridge <strong>tidak ideal</strong> untuk feature selection murni karena koefisiennya jarang nol persis.</div><div class="trap-card">⚠️ Fitur yang dipilih lasso <strong>bukan</strong> bukti kausal otomatis; itu fitur terbaik untuk prediksi dalam model yang diberikan.</div><div class="trap-card">⚠️ Semakin besar λ <strong>bukan</strong> selalu lebih baik; bisa underfitting.</div><div class="trap-card">⚠️ Lasso bisa tidak stabil jika banyak fitur saling berkorelasi tinggi; di sinilah Elastic Net membantu.</div>
+  </div>
+</div>
+
+<div class="footer">Machine Learning Interaktif · Week 2 — Lasso Regression</div>
+<script src="assets/app.js"></script>
+<script>
+const weekKeywords = [{"en": "Lasso", "id": "Regularization L1 yang bisa membuat koefisien menjadi nol."}, {"en": "Ridge", "id": "Regularization L2 yang mengecilkan koefisien."}, {"en": "Feature Selection", "id": "Pemilihan fitur yang relevan."}, {"en": "Sparsity", "id": "Kondisi banyak koefisien bernilai nol."}, {"en": "Lambda", "id": "Parameter penalti regularisasi."}, {"en": "Coefficient path", "id": "Perubahan koefisien saat lambda berubah."}, {"en": "Overfitting", "id": "Model terlalu menyesuaikan data latih."}, {"en": "Bias", "id": "Penyimpangan sistematis estimasi."}, {"en": "Variance", "id": "Kepekaan model terhadap perubahan data."}, {"en": "Elastic Net", "id": "Gabungan penalti L1 dan L2."}];
+const weekQuestions = [{"type": "mc", "typeName": "Pilihan Ganda", "q": "Tujuan utama feature selection adalah…", "options": ["Menambah jumlah fitur", "Memilih fitur paling relevan agar model lebih efisien dan mudah dijelaskan", "Menghapus semua data numerik", "Menjamin akurasi 100%"], "answer": 1, "explanation": "Feature selection menyeimbangkan performa, efisiensi, dan interpretability."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Mengapa all subsets feature selection sering tidak praktis?", "options": ["Karena hanya bisa dipakai pada data kecil", "Karena jumlah subset tumbuh 2^D", "Karena membutuhkan sigmoid", "Karena tidak bisa dipakai untuk regresi"], "answer": 1, "explanation": "Jumlah kombinasi fitur tumbuh eksponensial."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Penalti pada ridge regression adalah…", "options": ["L1", "L2", "Entropy", "Gini"], "answer": 1, "explanation": "Ridge memakai norma L2."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Penalti pada lasso regression adalah…", "options": ["L1", "L2", "Cosine", "Euclidean"], "answer": 0, "explanation": "Lasso memakai norma L1."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Mengapa lasso cocok untuk feature selection?", "options": ["Karena selalu meningkatkan akurasi", "Karena dapat mendorong koefisien menjadi tepat nol", "Karena tidak memerlukan lambda", "Karena menghapus seluruh data noisy"], "answer": 1, "explanation": "Koefisien nol berarti fitur dieliminasi."}, {"type": "mc", "typeName": "True / False", "q": "Ridge biasanya mengecilkan koefisien tetapi jarang men-nol-kan koefisien.", "options": ["True", "False"], "answer": 0, "explanation": "Ini perbedaan inti ridge vs lasso."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Peran parameter λ pada lasso/ridge adalah…", "options": ["Menambah jumlah fitur", "Mengatur trade-off antara fit data dan penalti kompleksitas", "Menentukan jumlah kelas", "Menghitung confusion matrix"], "answer": 1, "explanation": "Lambda kecil → fit dominan; lambda besar → penalti dominan."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika λ terlalu besar pada lasso, risiko utama adalah…", "options": ["Overfitting", "Underfitting", "Label leakage", "Class imbalance"], "answer": 1, "explanation": "Model bisa terlalu sparse dan kehilangan pola penting."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Elastic Net dibuat terutama untuk mengatasi…", "options": ["Kurangnya label data", "Masalah fitur berkorelasi tinggi dan kebutuhan gabungan L1+L2", "Kelemahan sigmoid", "Masalah clustering"], "answer": 1, "explanation": "Elastic Net menggabungkan kelebihan ridge dan lasso."}, {"type": "mc", "typeName": "True / False", "q": "Thresholding manual pada ridge coefficients selalu stabil untuk feature selection.", "options": ["True", "False"], "answer": 1, "explanation": "Justru materi menekankan bahwa threshold ridge bisa tidak stabil, terutama pada fitur berkorelasi."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Debiasing lasso dilakukan dengan cara…", "options": ["Menambah lambda", "Menjalankan lasso lalu refit least squares pada fitur terpilih", "Menghapus semua fitur nol", "Mengubah data menjadi cluster"], "answer": 1, "explanation": "Tujuannya mengurangi bias akibat shrinkage lasso."}, {"type": "cata", "typeName": "Choose All That Apply", "q": "Manakah yang termasuk kelebihan model sparse?", "options": ["Prediksi lebih cepat", "Memori lebih hemat", "Lebih mudah dijelaskan", "Pasti akurasi tertinggi"], "answers": [0, 1, 2], "explanation": "Sparsity memberi efisiensi dan interpretability, bukan jaminan akurasi tertinggi."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Greedy algorithms seperti forward stepwise bersifat…", "options": ["Exhaustive dan optimal global", "Heuristic, lebih murah daripada all subsets", "Selalu lebih baik dari lasso", "Tidak pernah dipakai"], "answer": 1, "explanation": "Forward/backward stepwise adalah pendekatan heuristik."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Pada coefficient path lasso saat λ meningkat, yang biasanya terjadi adalah…", "options": ["Semua koefisien membesar", "Beberapa koefisien turun hingga nol", "Jumlah fitur selalu naik", "R² pasti naik"], "answer": 1, "explanation": "Itulah sumber feature selection pada lasso."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Pernyataan paling tepat tentang lasso adalah…", "options": ["Metode kausal murni", "Metode regularization L1 untuk prediksi dan seleksi fitur", "Algoritma clustering", "Versi logistic regression"], "answer": 1, "explanation": "Lasso adalah regularized regression dengan penalti L1."}];
+renderKeywords('keyword-grid', weekKeywords);
+createQuizRenderer('quiz-container', weekQuestions);
+</script>
+</body>
+</html>

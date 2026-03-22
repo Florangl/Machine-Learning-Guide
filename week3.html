@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 3 — Logistic Regression & KNN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">🤖 Machine Learning</div>
+      <div class="header-sub">Week 3 — Logistic Regression & KNN</div>
+    </div>
+    <div class="week-badge">WEEK 3</div>
+  </div>
+</div>
+<div class="topnav"><a href="week1.html" class="">WEEK 1</a><a href="week2.html" class="">WEEK 2</a><a href="week3.html" class="active">WEEK 3</a><a href="week4.html" class="">WEEK 4</a><a href="week5.html" class="">WEEK 5</a><a href="week6.html" class="">WEEK 6</a><a href="index.html">🏠 Portal</a></div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Week 3 — Logistic Regression & KNN</h1>
+    <p>Classification pakai probabilitas dan classification pakai tetangga terdekat.</p>
+    <div class="pillrow">
+      <span class="pill">Materi inti</span>
+      <span class="pill">Analogi cepat paham</span>
+      <span class="pill">English term + arti Indonesia</span>
+      <span class="pill">15 soal</span>
+      <span class="pill">Jebakan dosen</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="tabs">
+    <button class="tab active" data-target="materi" onclick="showSection('materi')">📖 Materi</button>
+    <button class="tab" data-target="analogi" onclick="showSection('analogi')">🧠 Analogi</button>
+    <button class="tab" data-target="kata-kunci" onclick="showSection('kata-kunci')">🔑 Kata Kunci</button>
+    <button class="tab" data-target="latihan" onclick="showSection('latihan')">✏️ 15 Soal</button>
+    <button class="tab" data-target="jebakan" onclick="showSection('jebakan')">⚠️ Jebakan</button>
+  </div>
+
+  <div id="materi" class="section active">
+    <div class="section-title">Week 3 — Logistic Regression & KNN</div>
+    <div class="section-desc">Fokus: sigmoid, probability, threshold, confusion matrix, serta KNN sebagai lazy learning berbasis jarak.</div>
+    <div class="grid"><div class="card"><span class="tag">Logistic</span><h3>Probabilitas 0–1</h3><p>Logistic regression dipakai untuk klasifikasi biner. Ia menghasilkan probability dengan fungsi sigmoid sehingga output tetap di rentang 0 sampai 1.</p><div class="badge">⚡ UTS banget</div></div><div class="card"><span class="tag">Threshold</span><h3>Ubah Probabilitas jadi Kelas</h3><p>Setelah probability didapat, kita pakai threshold (sering 0.5) untuk memutuskan kelas 0 atau 1.</p><div class="badge">Dasar wajib</div></div><div class="card"><span class="tag">Evaluation</span><h3>Confusion Matrix</h3><p>Evaluasi klasifikasi tidak cukup accuracy. Kita harus paham TP, TN, FP, FN, precision, recall/sensitivity, dan specificity.</p><div class="badge">⚡ Sering ketukar</div></div><div class="card"><span class="tag">KNN</span><h3>Tetangga Terdekat</h3><p>KNN mengklasifikasikan data baru berdasarkan label data terdekat. Tidak membangun model global; karena itu disebut lazy learning.</p><div class="badge">Kunci metode</div></div><div class="card"><span class="tag">1-NN vs k-NN</span><h3>Satu vs Voting</h3><p>1-NN hanya lihat satu tetangga terdekat, sedangkan k-NN memakai voting dari beberapa tetangga. k-NN biasanya lebih stabil terhadap noise.</p><div class="badge">Perbandingan penting</div></div><div class="card"><span class="tag">Trade-off</span><h3>Training vs Prediction</h3><p>Logistic regression butuh training parameter, tapi prediksi cepat. KNN hampir tidak training, tapi prediksi bisa mahal karena harus hitung jarak ke banyak data.</p><div class="badge">Bandingkan</div></div></div>
+    <div class="info-block" style="margin-top:18px">
+      <h3>📌 Tabel Ringkas</h3>
+      
+        <table class="compare-table">
+          <tr><th>Aspek</th><th>Logistic Regression</th><th>KNN</th></tr>
+          <tr><td>Cara kerja</td><td>Belajar rumus probabilitas</td><td>Lihat tetangga terdekat</td></tr>
+          <tr><td>Training</td><td>Ada fitting parameter</td><td>Hampir tidak ada</td></tr>
+          <tr><td>Prediksi</td><td>Relatif cepat</td><td>Bisa mahal</td></tr>
+          <tr><td>Interpretasi</td><td>Cukup jelas</td><td>Lebih berbasis contoh</td></tr>
+        </table>
+        
+      <p><strong>Tips cepat:</strong> sebelum menghafal rumus, pahami dulu <em>cara berpikir model</em>. Di UTS, dosen sering menguji konsep, bukan sekadar hafalan definisi.</p>
+    </div>
+  </div>
+
+  <div id="analogi" class="section">
+    <div class="section-title">🧠 Cara Cepat Paham dengan Analogi</div>
+    <div class="section-desc">Analogi dibuat supaya inti materinya cepat masuk, tapi tetap setia pada konsep aslinya.</div>
+    <div class="analogy-box">
+      <div class="analogy-title">Analogi utama</div>
+      <p>Logistic regression seperti satpam yang menilai peluang seseorang boleh masuk berdasarkan skor. KNN seperti anak baru yang ikut geng terdekat: kalau paling dekat dengan anak backend, dia dianggap anak backend juga.</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Cara pakai analogi ini</h3>
+      <ul>
+        <li>Pakai analogi untuk ingat <strong>alurnya</strong>, bukan mengganti definisi formal.</li>
+        <li>Setelah paham analogi, cocokkan lagi ke istilah asli bahasa Inggris.</li>
+        <li>Kalau bisa menjelaskan dengan analogi + istilah formal, biasanya kamu sudah benar-benar paham.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="kata-kunci" class="section">
+    <div class="section-title">🔑 Kata Kunci Wajib Hafal</div>
+    <div class="section-desc">Istilah English tetap dipertahankan, lalu dijelaskan artinya dalam bahasa Indonesia.</div>
+    <div class="keyword-grid" id="keyword-grid"></div>
+  </div>
+
+  <div id="latihan" class="section">
+    <div class="section-title">✏️ Latihan Soal Week Ini</div>
+    <div class="section-desc">Ada 15 soal. Tidak dibuat terlalu mudah, tetapi tetap fair untuk menguji pemahaman konsep.</div>
+    <div id="quiz-container"></div>
+  </div>
+
+  <div id="jebakan" class="section">
+    <div class="section-title">⚠️ Jebakan Dosen</div>
+    <div class="section-desc">Kalimat atau konsep yang sering bikin mahasiswa salah.</div>
+    <div class="trap-card">⚠️ Logistic regression namanya ‘regression’, tetapi dipakai untuk <strong>classification</strong>.</div><div class="trap-card">⚠️ Accuracy tinggi <strong>tidak selalu</strong> berarti model bagus, terutama saat data imbalance.</div><div class="trap-card">⚠️ KNN bukan model parametric global; ia berbasis instance/memory.</div><div class="trap-card">⚠️ 1-NN sangat sensitif terhadap outlier dan noise.</div>
+  </div>
+</div>
+
+<div class="footer">Machine Learning Interaktif · Week 3 — Logistic Regression & KNN</div>
+<script src="assets/app.js"></script>
+<script>
+const weekKeywords = [{"en": "Sigmoid", "id": "Fungsi S-curve yang membatasi output 0–1."}, {"en": "Probability", "id": "Peluang suatu data termasuk ke kelas tertentu."}, {"en": "Threshold", "id": "Batas keputusan, misalnya 0.5."}, {"en": "Confusion Matrix", "id": "Tabel evaluasi hasil klasifikasi."}, {"en": "Precision", "id": "Dari prediksi positif, berapa yang benar."}, {"en": "Recall / Sensitivity", "id": "Dari semua positif asli, berapa yang terdeteksi."}, {"en": "Specificity", "id": "Kemampuan mengenali kelas negatif."}, {"en": "Euclidean Distance", "id": "Jarak geometris biasa."}, {"en": "Lazy Learning", "id": "Model tidak benar-benar dilatih di awal."}, {"en": "Nearest Neighbor", "id": "Tetangga terdekat untuk menentukan kelas."}];
+const weekQuestions = [{"type": "mc", "typeName": "Pilihan Ganda", "q": "Output utama logistic regression adalah…", "options": ["Angka kontinu tak terbatas", "Probabilitas antara 0 dan 1", "Jarak ke centroid", "Tree depth"], "answer": 1, "explanation": "Sigmoid membatasi output menjadi probabilitas 0–1."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Mengapa linear regression tidak ideal untuk klasifikasi biner?", "options": ["Karena tidak punya intercept", "Karena prediksi bisa di luar 0–1", "Karena hanya untuk data besar", "Karena tidak punya loss function"], "answer": 1, "explanation": "Probabilitas harus berada pada rentang 0–1."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Fungsi yang dipakai logistic regression untuk membatasi output adalah…", "options": ["ReLU", "Sigmoid", "Softmax selalu", "Tanh saja"], "answer": 1, "explanation": "Pada binary logistic regression, sigmoid adalah fungsi kunci."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika threshold = 0.5 dan model memberi probability 0.8, kelas prediksi biasanya…", "options": ["0", "1", "Tidak bisa ditentukan", "Outlier"], "answer": 1, "explanation": "Probability di atas threshold dipetakan ke kelas 1."}, {"type": "mc", "typeName": "True / False", "q": "Precision berfokus pada seberapa benar prediksi positif yang dibuat model.", "options": ["True", "False"], "answer": 0, "explanation": "Precision = TP / (TP + FP)."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Recall / Sensitivity adalah…", "options": ["TP / (TP + FN)", "TN / (TN + FP)", "TP / total", "(TP+TN)/total"], "answer": 0, "explanation": "Recall mengukur berapa banyak positif asli yang berhasil tertangkap."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "KNN disebut lazy learning karena…", "options": ["Training-nya selalu lambat", "Hampir tidak membangun model saat training dan kerja berat dilakukan saat prediksi", "Tidak memakai data training", "Selalu butuh GPU"], "answer": 1, "explanation": "KNN menyimpan data lalu menghitung jarak saat inference."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Perbedaan utama 1-NN dan k-NN adalah…", "options": ["1-NN pakai sigmoid", "1-NN lihat satu tetangga, k-NN voting beberapa tetangga", "k-NN untuk regresi saja", "1-NN tidak butuh jarak"], "answer": 1, "explanation": "k-NN biasanya lebih stabil terhadap noise."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Distance metric yang paling umum diperkenalkan pada KNN adalah…", "options": ["Cross entropy", "Euclidean distance", "Gini impurity", "Hinge loss"], "answer": 1, "explanation": "Materi menekankan similaritas berbasis jarak."}, {"type": "mc", "typeName": "True / False", "q": "KNN biasanya ringan saat prediksi walau data training sangat besar.", "options": ["True", "False"], "answer": 1, "explanation": "Justru prediksi KNN bisa mahal karena harus menghitung banyak jarak."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Confusion matrix terdiri dari…", "options": ["TP, FP, FN, TN", "Intercept, slope, loss, lambda", "Mean, median, mode, medoid", "Precision, recall, gradient, depth"], "answer": 0, "explanation": "Empat komponen dasarnya adalah TP, FP, FN, TN."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Underfitting pada klasifikasi berarti…", "options": ["Model terlalu kompleks dan hafal data latih", "Model terlalu sederhana sehingga gagal menangkap pola", "Model pasti punya akurasi 100%", "Validation loss selalu nol"], "answer": 1, "explanation": "Underfitting = model terlalu lemah."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika training loss turun terus tetapi validation loss mulai naik, ini tanda…", "options": ["Underfitting", "Overfitting", "Class balancing", "Feature scaling"], "answer": 1, "explanation": "Slide overfitting menunjukkan pola ini."}, {"type": "cata", "typeName": "Choose All That Apply", "q": "Manakah yang benar tentang logistic regression?", "options": ["Dipakai untuk classification", "Menghasilkan probability", "Bisa dievaluasi dengan confusion matrix", "Selalu lebih baik dari KNN"], "answers": [0, 1, 2], "explanation": "Logistic regression tidak selalu lebih baik dari semua metode lain."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Pernyataan paling tepat tentang KNN adalah…", "options": ["Model parametric dengan koefisien global", "Metode berbasis instance yang mengandalkan kemiripan dengan data terdekat", "Selalu butuh feature scaling? mutlak", "Tidak memerlukan labeled data"], "answer": 1, "explanation": "KNN adalah supervised, memory-based classifier."}];
+renderKeywords('keyword-grid', weekKeywords);
+createQuizRenderer('quiz-container', weekQuestions);
+</script>
+</body>
+</html>

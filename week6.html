@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 6 — Clustering: K-Means, K-Medoids, K-Medians</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">🤖 Machine Learning</div>
+      <div class="header-sub">Week 6 — Clustering: K-Means, K-Medoids, K-Medians</div>
+    </div>
+    <div class="week-badge">WEEK 6</div>
+  </div>
+</div>
+<div class="topnav"><a href="week1.html" class="">WEEK 1</a><a href="week2.html" class="">WEEK 2</a><a href="week3.html" class="">WEEK 3</a><a href="week4.html" class="">WEEK 4</a><a href="week5.html" class="">WEEK 5</a><a href="week6.html" class="active">WEEK 6</a><a href="index.html">🏠 Portal</a></div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Week 6 — Clustering: K-Means, K-Medoids, K-Medians</h1>
+    <p>Grouping tanpa label: kapan pakai mean, median, atau medoid.</p>
+    <div class="pillrow">
+      <span class="pill">Materi inti</span>
+      <span class="pill">Analogi cepat paham</span>
+      <span class="pill">English term + arti Indonesia</span>
+      <span class="pill">15 soal</span>
+      <span class="pill">Jebakan dosen</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="tabs">
+    <button class="tab active" data-target="materi" onclick="showSection('materi')">📖 Materi</button>
+    <button class="tab" data-target="analogi" onclick="showSection('analogi')">🧠 Analogi</button>
+    <button class="tab" data-target="kata-kunci" onclick="showSection('kata-kunci')">🔑 Kata Kunci</button>
+    <button class="tab" data-target="latihan" onclick="showSection('latihan')">✏️ 15 Soal</button>
+    <button class="tab" data-target="jebakan" onclick="showSection('jebakan')">⚠️ Jebakan</button>
+  </div>
+
+  <div id="materi" class="section active">
+    <div class="section-title">Week 6 — Clustering: K-Means, K-Medoids, K-Medians</div>
+    <div class="section-desc">Fokus: konsep cluster, objective SSE, langkah K-Means, inisialisasi, serta beda K-Means vs K-Medoids/K-Medians.</div>
+    <div class="grid"><div class="card"><span class="tag">Clustering</span><h3>Unsupervised Learning</h3><p>Clustering mengelompokkan data tanpa label predefined. Objek dalam cluster sama harus mirip; antar cluster harus berbeda.</p><div class="badge">Konsep dasar</div></div><div class="card"><span class="tag">K-Means</span><h3>Centroid = Mean</h3><p>Algoritma: pilih K centroid, assign tiap titik ke centroid terdekat, hitung ulang mean centroid, ulang sampai stabil.</p><div class="badge">⚡ Wajib hafal</div></div><div class="card"><span class="tag">Objective</span><h3>Minimalkan SSE</h3><p>K-Means berusaha meminimalkan sum of squared errors, yaitu total jarak kuadrat tiap titik ke centroid cluster-nya.</p><div class="badge">Istilah inti</div></div><div class="card"><span class="tag">Initialization</span><h3>Sangat Berpengaruh</h3><p>Centroid awal yang buruk bisa menghasilkan cluster jelek. Karena itu ada K-Means++ untuk inisialisasi lebih baik.</p><div class="badge">Jebakan penting</div></div><div class="card"><span class="tag">K-Medoids</span><h3>Pusat = Titik Asli</h3><p>K-Medoids memakai objek nyata paling representatif sebagai pusat cluster. Lebih tahan outlier dibanding K-Means.</p><div class="badge">Bandingkan</div></div><div class="card"><span class="tag">K-Medians</span><h3>Median Lebih Tahan</h3><p>K-Medians mengganti mean dengan median dan lebih tahan terhadap outlier. Untuk data kategorikal, ada K-Modes.</p><div class="badge">Lanjutan</div></div></div>
+    <div class="info-block" style="margin-top:18px">
+      <h3>📌 Tabel Ringkas</h3>
+      
+        <table class="compare-table">
+          <tr><th>Metode</th><th>Pusat Cluster</th><th>Respons terhadap Outlier</th></tr>
+          <tr><td>K-Means</td><td>Mean / centroid</td><td>Rentan</td></tr>
+          <tr><td>K-Medoids</td><td>Titik asli paling representatif</td><td>Lebih robust</td></tr>
+          <tr><td>K-Medians</td><td>Median</td><td>Lebih robust</td></tr>
+        </table>
+        
+      <p><strong>Tips cepat:</strong> sebelum menghafal rumus, pahami dulu <em>cara berpikir model</em>. Di UTS, dosen sering menguji konsep, bukan sekadar hafalan definisi.</p>
+    </div>
+  </div>
+
+  <div id="analogi" class="section">
+    <div class="section-title">🧠 Cara Cepat Paham dengan Analogi</div>
+    <div class="section-desc">Analogi dibuat supaya inti materinya cepat masuk, tapi tetap setia pada konsep aslinya.</div>
+    <div class="analogy-box">
+      <div class="analogy-title">Analogi utama</div>
+      <p>Bayangkan kamu membagi mahasiswa jadi kelompok belajar. K-Means memilih ketua kelompok berdasarkan ‘rata-rata posisi’ anggota. K-Medoids memilih ketua yang benar-benar mahasiswa nyata dan paling mewakili kelompok. K-Medians seperti memilih nilai tengah yang tidak gampang ditarik oleh outlier.</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Cara pakai analogi ini</h3>
+      <ul>
+        <li>Pakai analogi untuk ingat <strong>alurnya</strong>, bukan mengganti definisi formal.</li>
+        <li>Setelah paham analogi, cocokkan lagi ke istilah asli bahasa Inggris.</li>
+        <li>Kalau bisa menjelaskan dengan analogi + istilah formal, biasanya kamu sudah benar-benar paham.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="kata-kunci" class="section">
+    <div class="section-title">🔑 Kata Kunci Wajib Hafal</div>
+    <div class="section-desc">Istilah English tetap dipertahankan, lalu dijelaskan artinya dalam bahasa Indonesia.</div>
+    <div class="keyword-grid" id="keyword-grid"></div>
+  </div>
+
+  <div id="latihan" class="section">
+    <div class="section-title">✏️ Latihan Soal Week Ini</div>
+    <div class="section-desc">Ada 15 soal. Tidak dibuat terlalu mudah, tetapi tetap fair untuk menguji pemahaman konsep.</div>
+    <div id="quiz-container"></div>
+  </div>
+
+  <div id="jebakan" class="section">
+    <div class="section-title">⚠️ Jebakan Dosen</div>
+    <div class="section-desc">Kalimat atau konsep yang sering bikin mahasiswa salah.</div>
+    <div class="trap-card">⚠️ K-Means harus diberi nilai <strong>K</strong> di awal.</div><div class="trap-card">⚠️ K-Means sensitif terhadap outlier dan inisialisasi centroid awal.</div><div class="trap-card">⚠️ K-Means cocok untuk cluster yang cenderung convex/linearly separable, bukan bentuk arbitrer kompleks.</div><div class="trap-card">⚠️ K-Medoids lebih robust karena memakai titik asli, bukan rata-rata yang bisa tertarik outlier.</div>
+  </div>
+</div>
+
+<div class="footer">Machine Learning Interaktif · Week 6 — Clustering: K-Means, K-Medoids, K-Medians</div>
+<script src="assets/app.js"></script>
+<script>
+const weekKeywords = [{"en": "Cluster", "id": "Kelompok data yang mirip satu sama lain."}, {"en": "Centroid", "id": "Pusat cluster, biasanya mean pada K-Means."}, {"en": "SSE", "id": "Sum of Squared Errors; objective K-Means."}, {"en": "Convergence", "id": "Kondisi saat assignment cluster sudah stabil."}, {"en": "Initialization", "id": "Pemilihan pusat awal."}, {"en": "K-Means++", "id": "Metode inisialisasi centroid yang lebih baik."}, {"en": "Medoid", "id": "Objek nyata paling representatif dalam cluster."}, {"en": "Median", "id": "Nilai tengah, lebih tahan outlier."}, {"en": "Outlier", "id": "Titik yang sangat jauh dari pola umum."}, {"en": "Kernel K-Means", "id": "Versi K-Means untuk cluster non-convex."}];
+const weekQuestions = [{"type": "mc", "typeName": "Pilihan Ganda", "q": "Clustering termasuk jenis pembelajaran…", "options": ["Supervised", "Unsupervised", "Reinforcement", "Semi-supervised selalu"], "answer": 1, "explanation": "Clustering tidak membutuhkan label kelas."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Tujuan utama clustering adalah…", "options": ["Memprediksi probability kelas", "Mengelompokkan data sehingga yang mirip berada pada cluster sama", "Mengurangi jumlah fitur menjadi nol", "Menghitung confusion matrix"], "answer": 1, "explanation": "Cluster = similar within, dissimilar across."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Langkah dasar K-Means yang benar adalah…", "options": ["Pilih K centroid → assign titik → hitung ulang centroid → ulangi", "Hitung residual → boosting", "Pilih medoid → swap", "Hitung sigmoid"], "answer": 0, "explanation": "Ini urutan inti algoritma K-Means."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Objektif yang biasa diminimalkan K-Means adalah…", "options": ["SSE", "Cross entropy", "Gini", "Hinge loss"], "answer": 0, "explanation": "K-Means meminimalkan sum of squared errors."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Centroid pada K-Means dihitung sebagai…", "options": ["Nilai modus", "Rata-rata (mean) titik dalam cluster", "Titik terjauh", "Median selalu"], "answer": 1, "explanation": "Mean adalah pusat cluster pada K-Means."}, {"type": "mc", "typeName": "True / False", "q": "Hasil K-Means bisa berbeda jika inisialisasi awal centroid berbeda.", "options": ["True", "False"], "answer": 0, "explanation": "Inisialisasi sangat memengaruhi hasil akhir."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "K-Means++ dibuat untuk…", "options": ["Menghapus outlier", "Memilih centroid awal yang lebih baik", "Mengganti SSE dengan log loss", "Menentukan jumlah kelas"], "answer": 1, "explanation": "K-Means++ memperbaiki seeding awal."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Mengapa K-Means sensitif terhadap outlier?", "options": ["Karena memakai medoid", "Karena centroid berbasis mean mudah tertarik oleh nilai ekstrem", "Karena memakai mode", "Karena selalu random"], "answer": 1, "explanation": "Mean sangat dipengaruhi outlier."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Pada K-Medoids, pusat cluster adalah…", "options": ["Mean semua titik", "Salah satu titik asli yang paling representatif", "Median tiap fitur", "Titik nol"], "answer": 1, "explanation": "Medoid harus merupakan objek nyata dari data."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Keunggulan utama K-Medoids dibanding K-Means adalah…", "options": ["Selalu lebih cepat", "Lebih tahan terhadap outlier", "Tidak perlu K", "Bisa untuk semua bentuk cluster tanpa batas"], "answer": 1, "explanation": "Karena pusat cluster tidak ditarik oleh outlier sebesar mean."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "K-Medians menggunakan…", "options": ["Mean dan L2", "Median dan biasanya L1", "Mode dan cosine", "Tree dan vote"], "answer": 1, "explanation": "Median lebih robust terhadap outlier."}, {"type": "cata", "typeName": "Choose All That Apply", "q": "Manakah kelemahan umum K-Means?", "options": ["Harus memilih K di awal", "Sensitif terhadap outlier", "Bisa buruk jika inisialisasi jelek", "Selalu bisa mendeteksi cluster non-convex"], "answers": [0, 1, 2], "explanation": "K-Means justru sulit untuk cluster non-convex."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Kernel K-Means berguna terutama untuk…", "options": ["Menghapus missing value", "Menangani cluster non-convex / tidak linearly separable", "Menghitung medoid", "Menyelesaikan imbalance"], "answer": 1, "explanation": "Kernel membantu di ruang fitur yang lebih kaya."}, {"type": "mc", "typeName": "True / False", "q": "K-Medoids selalu memilih pusat cluster yang merupakan data point asli.", "options": ["True", "False"], "answer": 0, "explanation": "Ini definisi medoid."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika cost swap pada K-Medoids tidak lebih kecil dari sebelumnya, maka…", "options": ["Swap dipertahankan", "Swap dibatalkan/undo", "K harus ditambah", "Semua cluster dihapus"], "answer": 1, "explanation": "PAM menyimpan swap hanya jika kualitas membaik."}];
+renderKeywords('keyword-grid', weekKeywords);
+createQuizRenderer('quiz-container', weekQuestions);
+</script>
+</body>
+</html>

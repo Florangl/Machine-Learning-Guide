@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 5 — XGBoost & Imbalanced Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">🤖 Machine Learning</div>
+      <div class="header-sub">Week 5 — XGBoost & Imbalanced Data</div>
+    </div>
+    <div class="week-badge">WEEK 5</div>
+  </div>
+</div>
+<div class="topnav"><a href="week1.html" class="">WEEK 1</a><a href="week2.html" class="">WEEK 2</a><a href="week3.html" class="">WEEK 3</a><a href="week4.html" class="">WEEK 4</a><a href="week5.html" class="active">WEEK 5</a><a href="week6.html" class="">WEEK 6</a><a href="index.html">🏠 Portal</a></div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Week 5 — XGBoost & Imbalanced Data</h1>
+    <p>Boosting modern, preprocessing penting, dan mengatasi kelas tidak seimbang.</p>
+    <div class="pillrow">
+      <span class="pill">Materi inti</span>
+      <span class="pill">Analogi cepat paham</span>
+      <span class="pill">English term + arti Indonesia</span>
+      <span class="pill">15 soal</span>
+      <span class="pill">Jebakan dosen</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="tabs">
+    <button class="tab active" data-target="materi" onclick="showSection('materi')">📖 Materi</button>
+    <button class="tab" data-target="analogi" onclick="showSection('analogi')">🧠 Analogi</button>
+    <button class="tab" data-target="kata-kunci" onclick="showSection('kata-kunci')">🔑 Kata Kunci</button>
+    <button class="tab" data-target="latihan" onclick="showSection('latihan')">✏️ 15 Soal</button>
+    <button class="tab" data-target="jebakan" onclick="showSection('jebakan')">⚠️ Jebakan</button>
+  </div>
+
+  <div id="materi" class="section active">
+    <div class="section-title">Week 5 — XGBoost & Imbalanced Data</div>
+    <div class="section-desc">Fokus: missing value, skew, imbalance data, ensemble boosting, gradient boosting, dan keunggulan XGBoost.</div>
+    <div class="grid"><div class="card"><span class="tag">Preprocessing</span><h3>Handling Data</h3><p>Sebelum modeling, data perlu dibersihkan, diintegrasikan, ditransformasi, dan kadang direduksi. Model bagus dimulai dari data yang siap pakai.</p><div class="badge">Fondasimu</div></div><div class="card"><span class="tag">Missing Value</span><h3>Mean vs Median</h3><p>Jika distribusi tidak skewed, mean masih aman. Jika skewed, median lebih aman. Rule ini muncul langsung di slide week 5.</p><div class="badge">⚡ Sering keluar</div></div><div class="card"><span class="tag">Imbalance</span><h3>Kelas Tidak Seimbang</h3><p>Jika kelas minoritas sangat kecil, accuracy bisa menipu. Banyak algoritma gagal mengenali kelas minoritas meski akurasi total tinggi.</p><div class="badge">Wajib paham</div></div><div class="card"><span class="tag">Resampling</span><h3>Under vs Over</h3><p>Undersampling mengurangi kelas mayoritas, oversampling menambah kelas minoritas. Teknik umum: SMOTE, bootstrap.</p><div class="badge">Praktis</div></div><div class="card"><span class="tag">Boosting</span><h3>Belajar dari Error</h3><p>Boosting melatih model secara berurutan. Model baru fokus memperbaiki kesalahan model sebelumnya.</p><div class="badge">⚡ Inti ensemble</div></div><div class="card"><span class="tag">XGBoost</span><h3>Gradient Boosting + Optimasi</h3><p>XGBoost menambahkan regularisasi, penanganan missing value, pruning, paralelisasi, dan skalabilitas tinggi ke gradient boosting.</p><div class="badge">Kunci week ini</div></div></div>
+    <div class="info-block" style="margin-top:18px">
+      <h3>📌 Tabel Ringkas</h3>
+      
+        <table class="compare-table">
+          <tr><th>Konsep</th><th>Makna</th></tr>
+          <tr><td>Undersampling</td><td>Mengurangi kelas mayoritas</td></tr>
+          <tr><td>Oversampling</td><td>Menambah kelas minoritas</td></tr>
+          <tr><td>Boosting</td><td>Model baru fokus memperbaiki salah sebelumnya</td></tr>
+          <tr><td>XGBoost</td><td>Gradient boosting dengan optimasi dan regularisasi</td></tr>
+        </table>
+        
+      <p><strong>Tips cepat:</strong> sebelum menghafal rumus, pahami dulu <em>cara berpikir model</em>. Di UTS, dosen sering menguji konsep, bukan sekadar hafalan definisi.</p>
+    </div>
+  </div>
+
+  <div id="analogi" class="section">
+    <div class="section-title">🧠 Cara Cepat Paham dengan Analogi</div>
+    <div class="section-desc">Analogi dibuat supaya inti materinya cepat masuk, tapi tetap setia pada konsep aslinya.</div>
+    <div class="analogy-box">
+      <div class="analogy-title">Analogi utama</div>
+      <p>Boosting itu seperti guru les yang melihat soal mana yang salah dikerjakan murid, lalu latihan berikutnya fokus ke bagian salah itu. XGBoost adalah guru les yang bukan hanya fokus, tapi juga teratur, cepat, dan punya strategi agar murid tidak overfit ke satu jenis soal saja.</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Cara pakai analogi ini</h3>
+      <ul>
+        <li>Pakai analogi untuk ingat <strong>alurnya</strong>, bukan mengganti definisi formal.</li>
+        <li>Setelah paham analogi, cocokkan lagi ke istilah asli bahasa Inggris.</li>
+        <li>Kalau bisa menjelaskan dengan analogi + istilah formal, biasanya kamu sudah benar-benar paham.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="kata-kunci" class="section">
+    <div class="section-title">🔑 Kata Kunci Wajib Hafal</div>
+    <div class="section-desc">Istilah English tetap dipertahankan, lalu dijelaskan artinya dalam bahasa Indonesia.</div>
+    <div class="keyword-grid" id="keyword-grid"></div>
+  </div>
+
+  <div id="latihan" class="section">
+    <div class="section-title">✏️ Latihan Soal Week Ini</div>
+    <div class="section-desc">Ada 15 soal. Tidak dibuat terlalu mudah, tetapi tetap fair untuk menguji pemahaman konsep.</div>
+    <div id="quiz-container"></div>
+  </div>
+
+  <div id="jebakan" class="section">
+    <div class="section-title">⚠️ Jebakan Dosen</div>
+    <div class="section-desc">Kalimat atau konsep yang sering bikin mahasiswa salah.</div>
+    <div class="trap-card">⚠️ Akurasi tinggi pada data imbalance bisa <strong>menyesatkan</strong>.</div><div class="trap-card">⚠️ Mean <strong>tidak selalu</strong> pilihan terbaik untuk imputasi; cek skew dulu.</div><div class="trap-card">⚠️ XGBoost <strong>bukan</strong> Random Forest. Random Forest = bagging; XGBoost = boosting.</div><div class="trap-card">⚠️ Terlalu banyak estimator atau depth terlalu tinggi bisa menyebabkan overfitting.</div>
+  </div>
+</div>
+
+<div class="footer">Machine Learning Interaktif · Week 5 — XGBoost & Imbalanced Data</div>
+<script src="assets/app.js"></script>
+<script>
+const weekKeywords = [{"en": "Imbalanced Data", "id": "Distribusi kelas target tidak seimbang."}, {"en": "Undersampling", "id": "Mengurangi jumlah data kelas mayoritas."}, {"en": "Oversampling", "id": "Menambah jumlah data kelas minoritas."}, {"en": "SMOTE", "id": "Teknik oversampling sintetis."}, {"en": "Gradient Boosting", "id": "Ensemble berurutan yang belajar dari residual/error."}, {"en": "XGBoost", "id": "Extreme Gradient Boosting dengan banyak optimasi."}, {"en": "Learning Rate", "id": "Kecepatan kontribusi tree baru."}, {"en": "n_estimators", "id": "Jumlah tree dalam ensemble."}, {"en": "max_depth", "id": "Kedalaman maksimum tree."}, {"en": "Regularization", "id": "Hukuman untuk mencegah model terlalu kompleks."}];
+const weekQuestions = [{"type": "mc", "typeName": "Pilihan Ganda", "q": "Masalah utama pada imbalanced dataset adalah…", "options": ["Terlalu banyak fitur numerik", "Distribusi kelas target tidak seimbang sehingga model cenderung bias ke kelas mayoritas", "Data selalu missing", "Model pasti tidak bisa dilatih"], "answer": 1, "explanation": "Inilah inti masalah imbalance."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika data sangat skewed, strategi imputasi yang lebih aman biasanya…", "options": ["Mean", "Median", "Mode selalu", "Delete semua"], "answer": 1, "explanation": "Median lebih robust terhadap skew/outlier."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Undersampling berarti…", "options": ["Menambah data minoritas", "Mengurangi data mayoritas agar seimbang", "Menghapus semua data minoritas", "Mengubah label"], "answer": 1, "explanation": "Dipakai jika data mayoritas sangat banyak."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Oversampling berarti…", "options": ["Mengurangi kelas mayoritas", "Menambah contoh kelas minoritas", "Menghapus missing value", "Mengganti algoritma"], "answer": 1, "explanation": "Dipakai saat data minoritas terlalu sedikit."}, {"type": "mc", "typeName": "True / False", "q": "SMOTE adalah teknik oversampling.", "options": ["True", "False"], "answer": 0, "explanation": "SMOTE menambah contoh sintetis pada kelas minoritas."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Boosting berbeda dari bagging karena boosting…", "options": ["Melatih model secara paralel pada bootstrap sample", "Melatih model secara berurutan dengan fokus pada kesalahan sebelumnya", "Selalu memakai KNN", "Tidak pernah overfit"], "answer": 1, "explanation": "Boosting membangun learner secara sequential."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Gradient Boosting bekerja dengan cara…", "options": ["Memilih tetangga terdekat", "Membuat tree baru yang mempelajari residual/error model sebelumnya", "Menghitung centroid", "Menghapus fitur nol"], "answer": 1, "explanation": "Residual learning adalah inti gradient boosting."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "XGBoost dapat diringkas sebagai…", "options": ["Decision tree tunggal", "Gradient Boosting + banyak optimasi", "Logistic Regression + KNN", "Random Forest + clustering"], "answer": 1, "explanation": "Slide menulis langsung ringkasan ini."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Keunggulan utama XGBoost dibanding gradient boosting biasa adalah…", "options": ["Tidak perlu data training", "Ada regularisasi, handling missing value, pruning efisien, dan paralelisasi", "Tidak memakai tree", "Tidak butuh hyperparameter"], "answer": 1, "explanation": "Ini daftar inti dari slide."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Objektif XGBoost secara konsep adalah meminimalkan…", "options": ["Loss saja", "Loss + kompleksitas model (regularisasi)", "Jarak ke centroid", "Jumlah fitur"], "answer": 1, "explanation": "Regularisasi membuat model lebih tahan overfitting."}, {"type": "mc", "typeName": "True / False", "q": "Learning rate yang terlalu besar bisa mempercepat belajar tetapi meningkatkan risiko overfitting/instabilitas.", "options": ["True", "False"], "answer": 0, "explanation": "Learning rate mengontrol kontribusi tiap tree baru."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Parameter n_estimators pada XGBoost berarti…", "options": ["Jumlah fitur", "Jumlah tree", "Jumlah kelas", "Jumlah missing value"], "answer": 1, "explanation": "Ini definisi paling langsung."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika dosen bertanya ‘mengapa accuracy menipu pada data imbalance?’, jawaban terbaik adalah…", "options": ["Karena accuracy selalu salah", "Karena model bisa menebak kelas mayoritas terus dan tetap terlihat akurat walau gagal menangkap kelas minoritas", "Karena accuracy hanya untuk regresi", "Karena confusion matrix tidak penting"], "answer": 1, "explanation": "Ini inti evaluasi pada imbalance."}, {"type": "cata", "typeName": "Choose All That Apply", "q": "Manakah strategi yang membantu mengurangi overfitting pada XGBoost?", "options": ["Regularisasi", "Mengatur max_depth", "Learning rate yang lebih hati-hati", "Early stopping"], "answers": [0, 1, 2, 3], "explanation": "Semua strategi ini membantu mengontrol kompleksitas atau training process."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Pernyataan paling tepat tentang XGBoost adalah…", "options": ["Model clustering tanpa label", "Metode boosting yang sangat populer untuk data tabular karena kuat, cepat, dan fleksibel", "Algoritma lazy learning", "Versi sederhana dari K-Means"], "answer": 1, "explanation": "XGBoost adalah supervised ensemble boosting."}];
+renderKeywords('keyword-grid', weekKeywords);
+createQuizRenderer('quiz-container', weekQuestions);
+</script>
+</body>
+</html>

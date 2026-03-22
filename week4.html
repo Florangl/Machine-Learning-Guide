@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 4 — Decision Tree & Random Forest</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <div>
+      <div class="header-title">🤖 Machine Learning</div>
+      <div class="header-sub">Week 4 — Decision Tree & Random Forest</div>
+    </div>
+    <div class="week-badge">WEEK 4</div>
+  </div>
+</div>
+<div class="topnav"><a href="week1.html" class="">WEEK 1</a><a href="week2.html" class="">WEEK 2</a><a href="week3.html" class="">WEEK 3</a><a href="week4.html" class="active">WEEK 4</a><a href="week5.html" class="">WEEK 5</a><a href="week6.html" class="">WEEK 6</a><a href="index.html">🏠 Portal</a></div>
+
+<div class="hero">
+  <div class="hero-box">
+    <h1>Week 4 — Decision Tree & Random Forest</h1>
+    <p>Dari aturan IF-ELSE ke voting banyak pohon.</p>
+    <div class="pillrow">
+      <span class="pill">Materi inti</span>
+      <span class="pill">Analogi cepat paham</span>
+      <span class="pill">English term + arti Indonesia</span>
+      <span class="pill">15 soal</span>
+      <span class="pill">Jebakan dosen</span>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="tabs">
+    <button class="tab active" data-target="materi" onclick="showSection('materi')">📖 Materi</button>
+    <button class="tab" data-target="analogi" onclick="showSection('analogi')">🧠 Analogi</button>
+    <button class="tab" data-target="kata-kunci" onclick="showSection('kata-kunci')">🔑 Kata Kunci</button>
+    <button class="tab" data-target="latihan" onclick="showSection('latihan')">✏️ 15 Soal</button>
+    <button class="tab" data-target="jebakan" onclick="showSection('jebakan')">⚠️ Jebakan</button>
+  </div>
+
+  <div id="materi" class="section active">
+    <div class="section-title">Week 4 — Decision Tree & Random Forest</div>
+    <div class="section-desc">Fokus: cara tree membelah data, purity/Gini, overfitting tree, lalu ensemble bagging di Random Forest.</div>
+    <div class="grid"><div class="card"><span class="tag">Decision Tree</span><h3>Aturan Berurutan</h3><p>Decision tree memecah data dengan aturan fitur pada tiap node. Di leaf node, kita dapat kelas akhir atau probabilitas kelas.</p><div class="badge">Konsep dasar</div></div><div class="card"><span class="tag">Split Quality</span><h3>Purity / Gini</h3><p>Tree memilih split yang membuat node hasil semakin murni. Split bagus = kelas terpisah jelas; split jelek = kelas masih tercampur.</p><div class="badge">⚡ Penting</div></div><div class="card"><span class="tag">Decision Boundary</span><h3>Kotak-Kotak</h3><p>Karena split biasanya axis-aligned, batas keputusan decision tree terbentuk dari garis lurus/kotak, bukan kurva halus.</p><div class="badge">Ciri khas</div></div><div class="card"><span class="tag">Overfitting</span><h3>Tree Tunggal Rentan</h3><p>Decision tree yang terlalu dalam bisa menghafal data latih. Karena itu tree tunggal kuat dijelaskan tapi sering tidak stabil.</p><div class="badge">Jebakan soal</div></div><div class="card"><span class="tag">Random Forest</span><h3>Bagging Banyak Tree</h3><p>Random Forest membangun banyak tree dari bootstrap samples dan subset fitur acak, lalu memakai majority vote / average.</p><div class="badge">⚡ Inti utama</div></div><div class="card"><span class="tag">Why Better?</span><h3>Weak → Strong</h3><p>Satu tree bisa lemah atau noisy, tapi banyak tree yang beragam lalu digabung akan lebih stabil dan akurat.</p><div class="badge">Ensemble learning</div></div></div>
+    <div class="info-block" style="margin-top:18px">
+      <h3>📌 Tabel Ringkas</h3>
+      
+        <table class="compare-table">
+          <tr><th>Aspek</th><th>Decision Tree</th><th>Random Forest</th></tr>
+          <tr><td>Model</td><td>Satu pohon</td><td>Banyak pohon</td></tr>
+          <tr><td>Interpretasi</td><td>Sangat mudah</td><td>Lebih sulit</td></tr>
+          <tr><td>Overfitting</td><td>Rentan</td><td>Lebih tahan</td></tr>
+          <tr><td>Akurasi</td><td>Bisa fluktuatif</td><td>Biasanya lebih stabil</td></tr>
+        </table>
+        
+      <p><strong>Tips cepat:</strong> sebelum menghafal rumus, pahami dulu <em>cara berpikir model</em>. Di UTS, dosen sering menguji konsep, bukan sekadar hafalan definisi.</p>
+    </div>
+  </div>
+
+  <div id="analogi" class="section">
+    <div class="section-title">🧠 Cara Cepat Paham dengan Analogi</div>
+    <div class="section-desc">Analogi dibuat supaya inti materinya cepat masuk, tapi tetap setia pada konsep aslinya.</div>
+    <div class="analogy-box">
+      <div class="analogy-title">Analogi utama</div>
+      <p>Decision Tree itu seperti orang yang membuat keputusan pakai pertanyaan beruntun: ‘umur berapa? penghasilan berapa?’. Random Forest itu seperti kamu bertanya ke 100 orang yang berbeda, lalu mengambil jawaban mayoritas.</p>
+    </div>
+    <div class="info-block">
+      <h3>🎯 Cara pakai analogi ini</h3>
+      <ul>
+        <li>Pakai analogi untuk ingat <strong>alurnya</strong>, bukan mengganti definisi formal.</li>
+        <li>Setelah paham analogi, cocokkan lagi ke istilah asli bahasa Inggris.</li>
+        <li>Kalau bisa menjelaskan dengan analogi + istilah formal, biasanya kamu sudah benar-benar paham.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="kata-kunci" class="section">
+    <div class="section-title">🔑 Kata Kunci Wajib Hafal</div>
+    <div class="section-desc">Istilah English tetap dipertahankan, lalu dijelaskan artinya dalam bahasa Indonesia.</div>
+    <div class="keyword-grid" id="keyword-grid"></div>
+  </div>
+
+  <div id="latihan" class="section">
+    <div class="section-title">✏️ Latihan Soal Week Ini</div>
+    <div class="section-desc">Ada 15 soal. Tidak dibuat terlalu mudah, tetapi tetap fair untuk menguji pemahaman konsep.</div>
+    <div id="quiz-container"></div>
+  </div>
+
+  <div id="jebakan" class="section">
+    <div class="section-title">⚠️ Jebakan Dosen</div>
+    <div class="section-desc">Kalimat atau konsep yang sering bikin mahasiswa salah.</div>
+    <div class="trap-card">⚠️ Random Forest <strong>bukan</strong> satu pohon besar, melainkan banyak pohon kecil.</div><div class="trap-card">⚠️ Semua tree dalam forest <strong>tidak sama</strong>; ada random sample dan random feature.</div><div class="trap-card">⚠️ Decision Tree bisa sangat mudah dijelaskan, tapi juga gampang overfit jika dibiarkan terlalu kompleks.</div><div class="trap-card">⚠️ Split decision tree biasanya menghasilkan garis lurus, bukan kurva.</div>
+  </div>
+</div>
+
+<div class="footer">Machine Learning Interaktif · Week 4 — Decision Tree & Random Forest</div>
+<script src="assets/app.js"></script>
+<script>
+const weekKeywords = [{"en": "Decision Tree", "id": "Model pohon keputusan berbasis aturan."}, {"en": "Root Node", "id": "Node awal tempat pembelahan pertama."}, {"en": "Leaf Node", "id": "Node akhir berisi hasil prediksi."}, {"en": "Gini Impurity", "id": "Ukuran campuran kelas dalam node."}, {"en": "Purity", "id": "Tingkat kemurnian kelas dalam node."}, {"en": "Bootstrap", "id": "Sampling acak dengan pengulangan."}, {"en": "Bagging", "id": "Menggabungkan model paralel dari sampel acak."}, {"en": "Random Forest", "id": "Kumpulan banyak decision tree."}, {"en": "Majority Vote", "id": "Kelas akhir diambil dari suara terbanyak."}, {"en": "Outlier", "id": "Data menyimpang dari pola umum."}];
+const weekQuestions = [{"type": "mc", "typeName": "Pilihan Ganda", "q": "Decision tree memprediksi dengan cara…", "options": ["Menghitung jarak ke medoid", "Melewati aturan split dari root ke leaf", "Mengoptimasi sigmoid", "Voting semua kelas langsung"], "answer": 1, "explanation": "Tree membentuk aturan berurutan sampai leaf node."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Split yang baik pada decision tree bertujuan untuk…", "options": ["Meningkatkan impurity", "Memaksimalkan purity pemisahan kelas", "Meminimalkan jumlah fitur menjadi nol", "Menghasilkan kurva melengkung"], "answer": 1, "explanation": "Semakin murni node hasil split, semakin baik."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Batas keputusan decision tree klasik biasanya berbentuk…", "options": ["Kurva sinus", "Garis lurus / kotak-kotak axis-aligned", "Lingkaran konsentris", "Pasti diagonal"], "answer": 1, "explanation": "Karena split dilakukan per fitur."}, {"type": "mc", "typeName": "True / False", "q": "Decision tree tunggal rentan overfitting jika dibiarkan terlalu dalam.", "options": ["True", "False"], "answer": 0, "explanation": "Tree yang sangat dalam dapat menghafal noise data latih."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Random Forest adalah…", "options": ["Satu tree yang sangat dalam", "Kumpulan banyak decision tree dengan bagging dan random feature selection", "Versi logistic regression", "Teknik clustering"], "answer": 1, "explanation": "Ini inti ensemble random forest."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Bootstrap sampling berarti…", "options": ["Menghapus fitur secara acak", "Mengambil sampel data dengan pengulangan", "Memilih kelas mayoritas", "Menghitung confusion matrix"], "answer": 1, "explanation": "Setiap tree dilatih pada bootstrap sample."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Mengapa Random Forest biasanya lebih stabil daripada satu decision tree?", "options": ["Karena semua tree identik", "Karena menggabungkan banyak tree yang beragam sehingga varians berkurang", "Karena selalu memakai satu fitur", "Karena tidak pernah salah"], "answer": 1, "explanation": "Bagging mengurangi varians model."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Majority vote pada Random Forest dipakai untuk…", "options": ["Regresi linear", "Klasifikasi", "Clustering", "Feature scaling"], "answer": 1, "explanation": "Untuk klasifikasi, suara terbanyak menjadi prediksi akhir."}, {"type": "mc", "typeName": "True / False", "q": "Semua tree dalam Random Forest menggunakan semua fitur pada setiap split.", "options": ["True", "False"], "answer": 1, "explanation": "Pada tiap split hanya subset fitur acak yang dipertimbangkan."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Kelemahan utama decision tree tunggal dibanding Random Forest adalah…", "options": ["Tidak bisa dipakai untuk klasifikasi", "Lebih mudah overfit dan lebih tidak stabil terhadap perubahan data", "Tidak memiliki leaf node", "Selalu lambat saat training"], "answer": 1, "explanation": "Tree tunggal punya varians lebih tinggi."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika dosen bertanya ‘mengapa Random Forest disebut bagging?’, jawaban terbaik adalah…", "options": ["Karena model belajar berurutan memperbaiki error", "Karena membangun banyak tree dari bootstrap samples lalu menggabungkan hasilnya", "Karena menghitung gradien", "Karena meminimalkan log loss"], "answer": 1, "explanation": "Bagging = bootstrap aggregating."}, {"type": "cata", "typeName": "Choose All That Apply", "q": "Manakah yang benar tentang Random Forest?", "options": ["Menggunakan banyak decision tree", "Memakai random subset fitur", "Mengurangi varians dibanding tree tunggal", "Selalu lebih mudah dijelaskan daripada satu tree"], "answers": [0, 1, 2], "explanation": "Random Forest lebih kuat, tetapi biasanya lebih sulit dijelaskan daripada satu tree."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Gini impurity dipakai untuk…", "options": ["Evaluasi clustering", "Menilai kualitas split node pada tree", "Mengukur jarak Euclidean", "Menentukan learning rate"], "answer": 1, "explanation": "Gini adalah salah satu kriteria split."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Pernyataan paling tepat tentang ‘black box’ pada Random Forest adalah…", "options": ["Random Forest sepenuhnya tidak bisa dianalisis", "Lebih sulit dijelaskan daripada tree tunggal, tetapi tetap bisa dipahami melalui feature importance dan perilaku banyak tree", "Itu sama persis dengan logistic regression", "Artinya model tidak memakai aturan"], "answer": 1, "explanation": "Materi menekankan RF sering dianggap black box, tapi tetap interpretable secara tertentu."}, {"type": "mc", "typeName": "Pilihan Ganda", "q": "Jika semua tree dalam forest sangat mirip, efek ensemble biasanya…", "options": ["Makin kuat karena selalu sama", "Kurang maksimal karena keragaman rendah", "Pasti overfit", "Tidak bisa voting"], "answer": 1, "explanation": "Ensemble efektif saat base learners cukup beragam."}];
+renderKeywords('keyword-grid', weekKeywords);
+createQuizRenderer('quiz-container', weekQuestions);
+</script>
+</body>
+</html>
